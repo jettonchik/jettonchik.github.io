@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Переход на Jetton</title>
+  <meta name="theme-color" content="#0b0d12">
+
+  <!-- Резервный редирект -->
+  <meta http-equiv="refresh"
+        content="2;url=https://jettoncas.org/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: #0b0d12;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 32px;
+      animation: fadeIn .5s ease-out;
+    }
+
+    .spinner {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 28px;
+      border: 3px solid rgba(255,255,255,.1);
+      border-top-color: #4f8cff;
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+
+    h1 {
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -.4px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #9198a6;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #78a7ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fallback {
+      margin-top: 24px;
+      font-size: 13px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="spinner" aria-hidden="true"></div>
+
+    <h1>Переходим на Jetton</h1>
+    <p>Автоматическое перенаправление...</p>
+
+    <p class="fallback">
+      Если переход не произошёл,
+      <a href="https://jettoncas.org/">
+        нажмите сюда
+      </a>
+    </p>
+  </main>
+
+  <script>
+    const destination = "https://jettoncas.org/";
+
+    window.location.replace(destination);
+  </script>
+</body>
+</html>
